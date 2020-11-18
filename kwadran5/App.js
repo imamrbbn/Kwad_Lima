@@ -6,15 +6,21 @@ import { Provider } from 'react-redux';
 
 import store from './src/stores'
 import HomeScreen from './src/screens/HomeScreen'
+import SplashScreen from './src/screens/SplashScreen'
 
 const Stack = createStackNavigator()
 
 export default function App() {
-
   return (
     <Provider store ={store}>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen
+            name="Splash"
+            component={SplashScreen}
+            options={{
+              headerShown: false
+            }}/>
           <Stack.Screen 
             name="Home" 
             component={HomeScreen}

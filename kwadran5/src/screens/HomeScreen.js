@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import { StyleSheet, View, Text, Image, TextInput, Picker, Button } from 'react-native'
+import { StyleSheet, View, Text, Image, TextInput, Button } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
+import { Picker } from '@react-native-picker/picker';
 
 import { SET_NUMBER } from '../stores/actions/setNumber'
 import { SOLVE_NUMBER } from '../stores/actions/solveNumber'
@@ -51,7 +52,7 @@ export default function Homescreen({navigation}) {
               </Picker>
             </View>
 
-              <View style={{ width: 200, height: 50, marginHorizontal:'auto'}}>
+              <View style={{ width: 200, height: 50, marginLeft:'auto', marginRight:'auto'}}>
                 <Button
                   title="Convert"
                   color="#31326f"
@@ -91,8 +92,7 @@ const styles = StyleSheet.create({
     width: 150,
     backgroundColor: '#f4f4f2',
     marginLeft: 10,
-    color: '#31326f',
-    fontSize: 20
+    color: '#31326f'
   },
   title: {
     textAlign: "center",
